@@ -1,0 +1,43 @@
+{
+  "name": "indent-insight",
+  "displayName": "Indent Insight",
+  "description": "Indentation highlighting and code statistics",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.144.0"
+  },
+  "publisher": "Kureev-Dmitry",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+],
+  "main": "./extension.js",
+"contributes": {
+    "commands": [
+        {
+            "command": "indent-insight.showStatistics",
+            "title": "Show Statistics",
+            "category": "Indent Insight"
+        }
+    ]
+},
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.144.0", 
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "eslint": "^10.5.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
